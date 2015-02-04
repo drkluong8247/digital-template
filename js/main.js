@@ -24,7 +24,7 @@ window.onload = function() {
         
         // loads sound
         game.load.audio( 'castSound', 'assets/magicshot.mp3');
-        game.load.audio( 'backgroundMusic', 'assets/magical_theme.flac');
+        game.load.audio( 'backgroundMusic', 'assets/AnimalCrossing-TownHall.ogg');
     }
     
     //background image
@@ -99,8 +99,8 @@ window.onload = function() {
         
         // Adds sound
         fx = game.add.audio('castSound');
-        //music = game.add.audio('backgroundMusic', 1 true);
-        //music.play('', 0, 1, true);
+        music = game.add.audio('backgroundMusic', 1, true);
+        music.play('', 0, 1, true);
         
         // player's blank moment parameters(initial)
         blankCount = 0;
@@ -163,7 +163,7 @@ window.onload = function() {
         {
             blankCount = 0;
             blank = true;
-            blankDuration = game.rnd.integer() % 200 + 100;
+            blankDuration = game.rnd.integer() % 200 + 200;
             blankCoolDown = game.rnd.integer() % 500 + 500;
         }
         
